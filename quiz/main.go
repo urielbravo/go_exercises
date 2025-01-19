@@ -28,7 +28,7 @@ func main() {
 	var totalProblems int
 
 	for i, record := range records {
-		totalProblems += i
+		totalProblems += 1
 		var answer string
 		fmt.Printf("Problem #%d: %v = ", i, record[0])
 		fmt.Scanln(&answer)
