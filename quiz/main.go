@@ -25,7 +25,8 @@ func main() {
 	}
 
 	for i, record := range records {
-		// fmt.Printf("Row %d: %v\n", i, record)
-		fmt.Printf("Problem #%d: %v\n", i, record[0])
+		var answer string
+		fmt.Printf("Problem #%d: %v = ", i, record[0])
+		fmt.Scanln(&answer)
 	}
 }
