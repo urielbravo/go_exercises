@@ -24,9 +24,16 @@ func main() {
 		return
 	}
 
+	var correctAnswers int
+
 	for i, record := range records {
 		var answer string
 		fmt.Printf("Problem #%d: %v = ", i, record[0])
 		fmt.Scanln(&answer)
+		if answer == record[1] {
+			correctAnswers += 1
+		}
 	}
+
+	fmt.Printf("Total correct answers: %d\n", correctAnswers)
 }
