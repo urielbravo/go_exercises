@@ -25,8 +25,10 @@ func main() {
 	}
 
 	var correctAnswers int
+	var totalProblems int
 
 	for i, record := range records {
+		totalProblems += i
 		var answer string
 		fmt.Printf("Problem #%d: %v = ", i, record[0])
 		fmt.Scanln(&answer)
@@ -35,5 +37,5 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Total correct answers: %d\n", correctAnswers)
+	fmt.Printf("You scored %d out of %d\n", correctAnswers, totalProblems)
 }
