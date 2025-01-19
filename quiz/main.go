@@ -2,12 +2,16 @@ package main
 
 import (
 	"encoding/csv"
+	"flag"
 	"fmt"
 	"os"
 )
 
 func main() {
-	file, err := os.Open("problems.csv")
+	csvFilePath := flag.String("csv", "problems.csv", "Path to CSV file (default: problems.csv)")
+	flag.Parse()
+
+	file, err := os.Open(*csvFilePath)
 
 	if err != nil {
 		fmt.Println("Error openinf file:", err)
